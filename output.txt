@@ -1,0 +1,1 @@
+Switch	IP	int	device	description	line_protocol	ip_address	neighbor & port	mode	mac_address	vlan
