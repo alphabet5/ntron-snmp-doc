@@ -31,7 +31,9 @@ def snmp_next(ip_address, port, community, oid):
     return return_dict
 
 def switch_loop(ip):
-    community_string = 'public'
+    with open('community.txt', 'r') as f:
+        community_string = f.readline()
+    #community_string = 'public'
     sw_dict = dict()
     #Get OID for the N-Tron switch, used to create the future n-tron specific OID for port information
     sw_oid = snmp_get(ip, 161, community_string, '.1.3.6.1.2.1.1.2')
